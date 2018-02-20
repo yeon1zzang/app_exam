@@ -1,5 +1,5 @@
 // 자동차
-
+/*
 class car {
     public static void main(string[] args) {
         Car MyCar =
@@ -12,3 +12,4 @@ class car {
         }
     }
 }
+*/

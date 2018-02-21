@@ -1,104 +1,67 @@
-import java.util.Scanner;
-public class Exam {
-    public static void main(String[] args){
-
-        double inch, feet, yard;
-        Scanner sc = new Scanner(System.in);
-
-        System.out.println("변환할 미터값을 입력하시오.");
-        double meter = sc.nextDouble();
-
-        inch = 39.37*meter;
-        feet = 3.2808*meter;
-        yard = 1.0936*meter;
-
-        System.out.println("미터(M)를 인치(Inch)로 변환한 결과:"+inch);
-        System.out.println("미터(M)를 피트(Feet)로 변환한 결과:"+feet);
-        System.out.println("미터(M)를 야드(Yard)로 변환한 결과:"+yard);
-    }
-}
-
-// 18.02.14.수요일
-
-public class Person {
-    private int perID;
-    private int milID;
-
-    public Person(int pID, int mID) {
-        perID = pID;
-        milID = mID;
-    }
-    public Person(int pID) {
-        perID = pID;
-        milID = -1;
-    }
-    public void showInfo() {
-        System.out.println("주민번호"+perID);
-        if (milID == -1) {
-            System.out.println("군번이 없음");
-        } else {
-            System.out.println("군번 : " +milID);
-        }
-    }
-}
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class Exam {
-    public static void main(String[] args) {
-        Person p1 = new Person( 1234, 5678);
-        Person p2 = new Person( 4321);
+        public static void main(String[] args){
+            //frame 객체 생성
+            JFrame frame = new JFrame();
+            //frame 크기 설정
+            frame.setBounds(120,120,400,100);
+            //프레임 안에 배치될 버튼들의 배치 방식 설정
+            frame.setLayout(new GridLayout(2, 2));
+            //닫기 버튼 동작을 위한 리스너 설정 및 등록
+            /* WindowListener listener = new WindowAdapter() {
+                public void windowClosing(WindowEvent we) {
+                    System.exit(0);
+                }
+                public void windowOpened(WindowEvent we) {
+                    System.out.println("프로그램이 수행 되었습니다.");
+                }
+            };
 
-        p1.showInfo();
-        p2.showInfo();
-    }
-}
+            frame.addWindowListener(listener); */
 
-public class Exam {
-    public static void main(String[] args){
-        String str = "문자열 예제";
-        int strLen = str.length();
-        System.out.println(strLen);
+            JLabel label1 = new JLabel("ID");
+            JLabel label2 = new JLabel("Password");
+            JLabel label3 = new JLabel("E-mail");
+            JTextField textField1 = new JTextField();
+            JPasswordField textField2 = new JPasswordField();
+            JTextField textField3 = new JTextField();
 
-        if(strLen < 6 && strLen >= 20) {
-            System.out.println("올바른 비번");
-        } else {
-            System.out.println("재입력 요청");
-        }
-    }
-}
 
-public class Exam {
-    public static void main(String[] args){
-        String str1 = "Smart";
-        String str2 = " and ";
-        String str3 = "Simple";
+            PWHandler pwHandler = new PWHandler(textField1, textField2);
+            textField1.addActionListener(pwHandler);
+            textField2.addActionListener(pwHandler);
 
-        String result = str1.concat(str2);
-        System.out.println(result);
-    }
-}
+            frame.add(label1);
+            frame.add(textField1);
+            frame.add(label2);
+            frame.add(textField2);
+            frame.add(label3);
+            frame.add(textField3);
 
-public class Exam {
-    public static void main(String[] args){
-        String str1 = "A";
-        String str2 = "B";
-        String str3 = "Simple";
+            /*버튼 객체를 생성
+            JButton btn1 = new JButton("Btn1");
+            JButton btn2 = new JButton("Btn2");
+            JButton btn3 = new JButton("Btn3");
+            JButton btn4 = new JButton("Btn4");
+            JButton btn5 = new JButton("Btn5");
+            JButton btn6 = new JButton("Btn6");
 
-        String str4 = new String ("A")
 
-        int result = str4.length();
-        System.out.println(result);
-    }
-}
+            //버튼을 프레임 안에 추가
+            frame.add(btn1, BorderLayout.NORTH);
+            frame.add(btn2, BorderLayout.CENTER);
+            frame.add(btn3, BorderLayout.SOUTH);
+            frame.add(btn4, BorderLayout.SOUTH);
+            frame.add(btn5, BorderLayout.SOUTH);
+            frame.add(btn6, BorderLayout.SOUTH);*/
 
-public class Exam {
-    public static void main(String[] args) {
-        String[] strArray = new String[3];
-        strArray[0] = new String("JAVA");
-        strArray[1] = new String("Flex");
-        strArray[2] = new String("Ruby");
-
-        for (int i = 0; i < strArray.length; i++){
-            System.out.println(strArray[i]);
+            //프레임을 화면에 보여줌
+            frame.setVisible(true);
         }
     }
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="movie_director">
+    <item>감독 : 홍창표</item>
+    <item>감독 : 토미 위르콜라</item>
+    <item>감독 : 기예르모 델 토로</item>
+    <item>감독 : 히로키 류이치</item>
+    </string-array>
+</resources>

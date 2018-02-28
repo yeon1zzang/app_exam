@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="movie_actor">
+        <item>배우 : 심은경 ,  이승기</item>
+        <item>배우 : 누미 라파스 ,  윌렘 데포 ,  글렌 클로즈</item>
+        <item>배우 : 샐리 호킨스 ,  마이클 섀넌</item>
+        <item>배우 : 야마다 료스케 ,  니시다 토시유키</item>
+    </string-array>
+</resources>

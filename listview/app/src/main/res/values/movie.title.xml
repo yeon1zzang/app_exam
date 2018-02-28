@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="movie_title">
+        <item>궁합</item>
+        <item>일요일이 사라졌다</item>
+        <item>셰이프 오브 워터: 사랑의 모양</item>
+        <item>나미야 잡화점의 기적</item>
+    </string-array>
+</resources>
